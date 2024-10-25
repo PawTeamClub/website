@@ -20,7 +20,8 @@ export default defineNuxtConfig({
 	},
 	modules: [
 		'@unocss/nuxt',
-		'nuxtjs-naive-ui'
+		'nuxtjs-naive-ui',
+		'@nuxtjs/i18n'
 	],
 	vite: {
 		plugins: [
