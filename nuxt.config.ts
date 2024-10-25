@@ -7,6 +7,7 @@ export default defineNuxtConfig({
 	ssr: false,
 	srcDir: 'src',
 	app: {
+		baseURL: '.',
 		head: {
 			title: 'Paw Team'
 		},
