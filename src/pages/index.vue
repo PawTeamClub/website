@@ -225,6 +225,22 @@ const members = pipe(
 		{
 			osu_id: 14748844,
 			mode: 'mania'
+		},
+		{
+			osu_id: 20846896,
+			mode: 'mania'
+		},
+		{
+			osu_id: 11829623,
+			mode: 'mania'
+		},
+		{
+			osu_id: 3595196,
+			mode: 'mania'
+		},
+		{
+			osu_id: 5010694,
+			mode: 'mania'
 		}
 	],
 	groupBy(
