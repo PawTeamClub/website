@@ -33,8 +33,8 @@ export default defineNuxtConfig({
 		detectBrowserLanguage: {
 			useCookie: false
 		},
-		locales: ['zh', 'en'],
-		defaultLocale: 'zh'
+		locales: ['en', 'zh'],
+		defaultLocale: 'en'
 	},
 	vite: {
 		plugins: [

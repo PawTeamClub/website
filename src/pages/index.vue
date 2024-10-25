@@ -400,32 +400,6 @@ const members = pipe(
 
 <i18n>
 {
-	"zh": {
-		"name": "Paw Team",
-		"intro": "介绍",
-		"intro_1": "Paw 是一个小动物音游社团，意在聚集玩 osu 的小动物，让大家能够一起交流。",
-		"intro_2": "社团中每个小动物都有自己的特色，大家都有各自擅长的领域，都是独一无二的存在。",
-		"intro_3": "希望这个社团能成为大家愿意时常来光顾的地方。",
-		"team_current_can_join": "战队目前开放加入。",
-		"join_method": "加入方式",
-		"team_leader": "队长",
-		"join_dc_left": "1.DC 群: 在 osu 联系",
-		"join_dc_right": "，直到通过审核后会邀请进入 DC 群。",
-		"join_qq_left": "2.QQ 群: 在 osu 联系",
-		"join_qq_right": "，直到通过审核后会邀请进入 Q 群。",
-		"join_notice": "注意要点",
-		"join_notice_1_left": "1.本社团只接受福瑞，如果你只是知道福瑞或喜欢福瑞的人，是不被社团接受的。你可以有很多个崽或设定，这是你的自由，",
-		"join_notice_1_left_tips": "但在社团里不允许使用人类设定来进行交流。",
-		"join_notice_1_right": "总而言之，就是你必须得有一个兽设。如果你觉得想设定是个很难的事情，或者你不知道如何着想，",
-		"join_notice_1_right_tips": "《如何构思一个兽设？》。",
-		"join_notice_2": "2.社团只接受 osu!taiko, osu!catch 和 osu!mania 三个模式的玩家，专修其他音游和玩法的玩家是不被社团接受的。",
-		"join_notice_3": "3.本社团虽然喜爱福瑞，但并不是什么混福瑞圈子的团体，希望到来的小动物能够注意一下交流时的言辞。",
-		"join_notice_4": "4.交流时，了解并注意不要触及一些人的底线。回忆是永久存在的。",
-		"member_list": "成员列表",
-		"collab_before": "合作往事",
-		"collab_eevee_2": "第二次伊布 collab",
-		"collab_eevee_3": "第三次伊布 collab"
-	},
 	"en": {
 		"name": "Paw Team",
 		"intro": "About",
@@ -451,6 +425,32 @@ const members = pipe(
 		"collab_before": "Collab before",
 		"collab_eevee_2": "Second Eevee collab",
 		"collab_eevee_3": "Third Eevee collab"
+	},
+	"zh": {
+		"name": "Paw Team",
+		"intro": "介绍",
+		"intro_1": "Paw 是一个小动物音游社团，意在聚集玩 osu 的小动物，让大家能够一起交流。",
+		"intro_2": "社团中每个小动物都有自己的特色，大家都有各自擅长的领域，都是独一无二的存在。",
+		"intro_3": "希望这个社团能成为大家愿意时常来光顾的地方。",
+		"team_current_can_join": "战队目前开放加入。",
+		"join_method": "加入方式",
+		"team_leader": "队长",
+		"join_dc_left": "1.DC 群: 在 osu 联系",
+		"join_dc_right": "，直到通过审核后会邀请进入 DC 群。",
+		"join_qq_left": "2.QQ 群: 在 osu 联系",
+		"join_qq_right": "，直到通过审核后会邀请进入 Q 群。",
+		"join_notice": "注意要点",
+		"join_notice_1_left": "1.本社团只接受福瑞，如果你只是知道福瑞或喜欢福瑞的人，是不被社团接受的。你可以有很多个崽或设定，这是你的自由，",
+		"join_notice_1_left_tips": "但在社团里不允许使用人类设定来进行交流。",
+		"join_notice_1_right": "总而言之，就是你必须得有一个兽设。如果你觉得想设定是个很难的事情，或者你不知道如何着想，",
+		"join_notice_1_right_tips": "《如何构思一个兽设？》。",
+		"join_notice_2": "2.社团只接受 osu!taiko, osu!catch 和 osu!mania 三个模式的玩家，专修其他音游和玩法的玩家是不被社团接受的。",
+		"join_notice_3": "3.本社团虽然喜爱福瑞，但并不是什么混福瑞圈子的团体，希望到来的小动物能够注意一下交流时的言辞。",
+		"join_notice_4": "4.交流时，了解并注意不要触及一些人的底线。回忆是永久存在的。",
+		"member_list": "成员列表",
+		"collab_before": "合作往事",
+		"collab_eevee_2": "第二次伊布 collab",
+		"collab_eevee_3": "第三次伊布 collab"
 	}
 }
 </i18n>
