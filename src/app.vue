@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { darkTheme, dateZhCN, lightTheme, useOsTheme, zhCN } from 'naive-ui'
-import avatar from '~/assets/avatar_main.webp'
+import avatar from 'assets/avatar.webp'
 
 const osTheme = useOsTheme()
 const theme = computed(() => {
