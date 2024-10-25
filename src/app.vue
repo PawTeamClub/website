@@ -55,5 +55,5 @@ useHead({
 </template>
 
 <style lang="scss">
-@import '~/styles/transitions/page';
+@use '~/styles/transitions/page';
 </style>
