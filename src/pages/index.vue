@@ -425,6 +425,32 @@ const members = pipe(
 		"collab_before": "合作往事",
 		"collab_eevee_2": "第二次伊布 collab",
 		"collab_eevee_3": "第三次伊布 collab"
+	},
+	"en": {
+		"name": "Paw Team",
+		"intro": "About",
+		"intro_1": "Paw is a furry music game club that aims to gather small animals that play osu so that everyone can communicate together.",
+		"intro_2": "Every animal in the club has its own characteristics, everyone has their own areas of expertise, and they are all unique.",
+		"intro_3": "hope this club can become a place that everyone is willing to visit often.",
+		"team_current_can_join": "team is currently open to join.",
+		"join_method": "How to join",
+		"team_leader": "team leader",
+		"join_dc_left": "1.Discord server: contact at osu",
+		"join_dc_right": ", and will be invited to join the Discord server after passing the review.",
+		"join_qq_left": "2.QQ group: contact at osu",
+		"join_qq_right": ", and then you will be invited to join the QQ group after passing the review.",
+		"join_notice": "Notice",
+		"join_notice_1_left": "1. This club only accepts furry. If you are just someone who knows furry or likes furry, you will not be accepted by the club. You can have many children or settings. This is your freedom.",
+		"join_notice_1_left_tips": "However, using human settings to communicate is not allowed in the community.",
+		"join_notice_1_right": "In short, you must have a furry setting. If you think it is difficult to set it up, or you don't know how to think about it,",
+		"join_notice_1_right_tips": "<How to conceive a furry character?>",
+		"join_notice_2": "2. The club only accepts players of osu!taiko, osu!catch and osu!mania. Players who specialize in other music games and gameplay are not accepted by the club.",
+		"join_notice_3": "3. Although this club loves furry, it is not a group that hangs out in the furry circle. We hope that the animals that come here will be careful with their words when communicating.",
+		"join_notice_4": "4. When communicating, understand and be careful not to touch some people's bottom line. Memories are permanent.",
+		"member_list": "Members List",
+		"collab_before": "Collab before",
+		"collab_eevee_2": "Second Eevee collab",
+		"collab_eevee_3": "Third Eevee collab"
 	}
 }
 </i18n>
