@@ -16,6 +16,11 @@ export default defineNuxtConfig({
 			mode: 'out-in'
 		}
 	},
+	router: {
+		options: {
+			hashMode: true
+		}
+	},
 	devtools: {
 		enabled: true
 	},
