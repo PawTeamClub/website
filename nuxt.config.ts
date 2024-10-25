@@ -6,6 +6,18 @@ import Components from 'unplugin-vue-components/vite'
 export default defineNuxtConfig({
 	ssr: false,
 	srcDir: 'src',
+	app: {
+		head: {
+			title: 'Paw Team'
+		},
+		pageTransition: {
+			name: 'page',
+			mode: 'out-in'
+		}
+	},
+	devtools: {
+		enabled: true
+	},
 	modules: [
 		'@unocss/nuxt',
 		'nuxtjs-naive-ui'
