@@ -23,6 +23,13 @@ export default defineNuxtConfig({
 		'nuxtjs-naive-ui',
 		'@nuxtjs/i18n'
 	],
+	i18n: {
+		detectBrowserLanguage: {
+			useCookie: false
+		},
+		locales: ['zh', 'en'],
+		defaultLocale: 'zh'
+	},
 	vite: {
 		plugins: [
 			AutoImport({
