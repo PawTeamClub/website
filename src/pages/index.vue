@@ -288,7 +288,7 @@ const members = pipe(
 							<n-text class="cursor-pointer" type="info">{{ t('join_notice_1_left_tips') }}</n-text>
 						</template>
 
-						<n-text>此有前科之鉴。使用人类设定说明你的交际圈和我们并不在一块，即使不一定是这样，但为了避免令我们不快的情况产生，社团将直接隔断此现象产生。</n-text>
+						<n-text>{{ t('join_notice_1_left_tips_content') }}</n-text>
 					</n-popover>
 
 					<br>
@@ -299,11 +299,11 @@ const members = pipe(
 							<n-text class="cursor-pointer" type="info">{{ t('join_notice_1_right_tips') }}</n-text>
 						</template>
 
-						<n-text>由唯兽主义出品的《</n-text>
+						<n-text>{{ t('join_notice_1_right_tips_content_left') }}</n-text>
 						<n-button type="primary" text tag="a" href="https://www.bilibili.com/video/BV1Vt4y1278d">
-							如何绘制一个兽设???
+							{{ t('join_notice_1_right_tips_content_link') }}
 						</n-button>
-						<n-text>》，至少你能对构思方法有个大致的了解。</n-text>
+						<n-text>{{ t('join_notice_1_right_tips_content_right') }}</n-text>
 					</n-popover>
 
 					<br>
@@ -416,8 +416,12 @@ const members = pipe(
 		"join_notice": "Notice",
 		"join_notice_1_left": "1. This club only accepts furry. If you are just someone who knows furry or likes furry, you will not be accepted by the club. You can have many children or settings. This is your freedom.",
 		"join_notice_1_left_tips": "However, using human settings to communicate is not allowed in the community.",
-		"join_notice_1_right": "In short, you must have a furry setting. If you think it is difficult to set it up, or you don't know how to think about it,",
+		"join_notice_1_left_tips_content": "This has been a precedent. Using human settings means that your social circle is not in the same circle as ours. Even if this is not necessarily the case, in order to avoid situations that make us unhappy, the community will directly cut off this phenomenon.",
+		"join_notice_1_right": "In short, you must have a furry setting. If you think it is difficult to set it up, or you don't know how to think about it, ",
 		"join_notice_1_right_tips": "<How to conceive a furry character?>",
+		"join_notice_1_right_tips_content_left": "<",
+		"join_notice_1_right_tips_content_link": "How to draw a furry character ???",
+		"join_notice_1_right_tips_content_right": "> Produced by 唯兽主义, at least you can have a general understanding of the conception method.",
 		"join_notice_2": "2. The club only accepts players of osu!taiko, osu!catch and osu!mania. Players who specialize in other music games and gameplay are not accepted by the club.",
 		"join_notice_3": "3. Although this club loves furry, it is not a group that hangs out in the furry circle. We hope that the animals that come here will be careful with their words when communicating.",
 		"join_notice_4": "4. When communicating, understand and be careful not to touch some people's bottom line. Memories are permanent.",
@@ -442,8 +446,12 @@ const members = pipe(
 		"join_notice": "注意要点",
 		"join_notice_1_left": "1.本社团只接受福瑞，如果你只是知道福瑞或喜欢福瑞的人，是不被社团接受的。你可以有很多个崽或设定，这是你的自由，",
 		"join_notice_1_left_tips": "但在社团里不允许使用人类设定来进行交流。",
+		"join_notice_1_left_tips_content": "此有前科之鉴。使用人类设定说明你的交际圈和我们并不在一块，即使不一定是这样，但为了避免令我们不快的情况产生，社团将直接隔断此现象产生。",
 		"join_notice_1_right": "总而言之，就是你必须得有一个兽设。如果你觉得想设定是个很难的事情，或者你不知道如何着想，",
 		"join_notice_1_right_tips": "《如何构思一个兽设？》。",
+		"join_notice_1_right_tips_content_left": "由唯兽主义出品的《",
+		"join_notice_1_right_tips_content_link": "如何绘制一个兽设???",
+		"join_notice_1_right_tips_content_right": "》，至少你能对构思方法有个大致的了解。",
 		"join_notice_2": "2.社团只接受 osu!taiko, osu!catch 和 osu!mania 三个模式的玩家，专修其他音游和玩法的玩家是不被社团接受的。",
 		"join_notice_3": "3.本社团虽然喜爱福瑞，但并不是什么混福瑞圈子的团体，希望到来的小动物能够注意一下交流时的言辞。",
 		"join_notice_4": "4.交流时，了解并注意不要触及一些人的底线。回忆是永久存在的。",
