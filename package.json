@@ -14,6 +14,7 @@
 		"naive-ui": "^2.40.1",
 		"nuxt": "^3.13.2",
 		"nuxtjs-naive-ui": "^1.0.2",
+		"remeda": "^2.16.0",
 		"sass": "^1.80.4",
 		"unocss": "^0.63.6",
 		"unplugin-auto-import": "^0.18.3",
