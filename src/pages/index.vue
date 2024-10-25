@@ -1,67 +1,236 @@
 <script setup lang="ts">
-import avatar from '~/assets/avatar_main.webp'
+import avatar from 'assets/avatar.webp'
+import collab_eevee_2_1 from 'assets/collab_eevee_2_1.webp'
+import collab_eevee_2_2 from 'assets/collab_eevee_2_2.webp'
+import collab_eevee_2_3 from 'assets/collab_eevee_2_3.webp'
+import collab_eevee_2_4 from 'assets/collab_eevee_2_4.webp'
+import collab_eevee_2_5 from 'assets/collab_eevee_2_5.webp'
+import collab_eevee_2_6 from 'assets/collab_eevee_2_6.webp'
+import collab_eevee_2_7 from 'assets/collab_eevee_2_7.webp'
+import collab_eevee_2_8 from 'assets/collab_eevee_2_8.webp'
+import collab_eevee_2_9 from 'assets/collab_eevee_2_9.webp'
+import collab_eevee_3 from 'assets/collab_eevee_3.webp'
+import { groupBy, pipe, prop } from 'remeda'
 
 const { t } = useI18n({
 	useScope: 'local'
 })
 
-const member_osu_ids = new Set([
-	6786079,
-	1759858,
-	4850066,
-	4313716,
-	16191222,
-	8693179,
-	10233705,
+const members = pipe(
+	[
+		{
+			osu_id: 6786079,
+			mode: 'std'
+		},
+		{
+			osu_id: 1759858,
+			mode: 'std'
+		},
+		{
+			osu_id: 4850066,
+			mode: 'std'
+		},
+		{
+			osu_id: 4313716,
+			mode: 'std'
+		},
+		{
+			osu_id: 16191222,
+			mode: 'std'
+		},
+		{
+			osu_id: 8693179,
+			mode: 'std'
+		},
+		{
+			osu_id: 10233705,
+			mode: 'std'
+		},
 
-	4850066,
-	8693179,
-	21425611,
-	14944234,
-	10233705,
+		{
+			osu_id: 4850066,
+			mode: 'taiko'
+		},
+		{
+			osu_id: 8693179,
+			mode: 'taiko'
+		},
+		{
+			osu_id: 21425611,
+			mode: 'taiko'
+		},
+		{
+			osu_id: 14944234,
+			mode: 'taiko'
+		},
+		{
+			osu_id: 10233705,
+			mode: 'taiko'
+		},
 
-	6336721,
-	8837858,
-	14814265,
-	7293637,
-	10233705,
-	9872908,
+		{
+			osu_id: 6336721,
+			mode: 'catch'
+		},
+		{
+			osu_id: 8837858,
+			mode: 'catch'
+		},
+		{
+			osu_id: 14814265,
+			mode: 'catch'
+		},
+		{
+			osu_id: 7293637,
+			mode: 'catch'
+		},
+		{
+			osu_id: 10233705,
+			mode: 'catch'
+		},
+		{
+			osu_id: 9872908,
+			mode: 'catch'
+		},
 
-	6336721,
-	7143444,
-	8664325,
-	8837858,
-	13478805,
-	13188822,
-	14906054,
-	15096556,
-	15305304,
-	8301585,
-	14858859,
-	15176778,
-	14814265,
-	17709082,
-	31185655,
-	15838281,
-	17945954,
-	15832551,
-	10233705,
-	15555328,
-	19900854,
-	7794488,
-	9872908,
-	13821222,
-	27416598,
-	23294788,
-	15141441,
-	12435997,
-	6814203,
-	22318558,
-	15807315,
+		{
+			osu_id: 6336721,
+			mode: 'mania'
+		},
+		{
+			osu_id: 7143444,
+			mode: 'mania'
+		},
+		{
+			osu_id: 8664325,
+			mode: 'mania'
+		},
+		{
+			osu_id: 8837858,
+			mode: 'mania'
+		},
+		{
+			osu_id: 13478805,
+			mode: 'mania'
+		},
+		{
+			osu_id: 13188822,
+			mode: 'mania'
+		},
+		{
+			osu_id: 14906054,
+			mode: 'mania'
+		},
+		{
+			osu_id: 15096556,
+			mode: 'mania'
+		},
+		{
+			osu_id: 15305304,
+			mode: 'mania'
+		},
+		{
+			osu_id: 8301585,
+			mode: 'mania'
+		},
+		{
+			osu_id: 14858859,
+			mode: 'mania'
+		},
+		{
+			osu_id: 15176778,
+			mode: 'mania'
+		},
+		{
+			osu_id: 14814265,
+			mode: 'mania'
+		},
+		{
+			osu_id: 17709082,
+			mode: 'mania'
+		},
+		{
+			osu_id: 31185655,
+			mode: 'mania'
+		},
+		{
+			osu_id: 15838281,
+			mode: 'mania'
+		},
+		{
+			osu_id: 17945954,
+			mode: 'mania'
+		},
+		{
+			osu_id: 15832551,
+			mode: 'mania'
+		},
+		{
+			osu_id: 10233705,
+			mode: 'mania'
+		},
+		{
+			osu_id: 15555328,
+			mode: 'mania'
+		},
+		{
+			osu_id: 19900854,
+			mode: 'mania'
+		},
+		{
+			osu_id: 7794488,
+			mode: 'mania'
+		},
+		{
+			osu_id: 9872908,
+			mode: 'mania'
+		},
+		{
+			osu_id: 13821222,
+			mode: 'mania'
+		},
+		{
+			osu_id: 27416598,
+			mode: 'mania'
+		},
+		{
+			osu_id: 23294788,
+			mode: 'mania'
+		},
+		{
+			osu_id: 15141441,
+			mode: 'mania'
+		},
+		{
+			osu_id: 12435997,
+			mode: 'mania'
+		},
+		{
+			osu_id: 6814203,
+			mode: 'mania'
+		},
+		{
+			osu_id: 22318558,
+			mode: 'mania'
+		},
+		{
+			osu_id: 15807315,
+			mode: 'mania'
+		},
 
-	16303789,
-	14748844
-])
+		{
+			osu_id: 16303789,
+			mode: 'mania'
+		},
+		{
+			osu_id: 14748844,
+			mode: 'mania'
+		}
+	],
+	groupBy(
+		prop('mode')
+	)
+)
 </script>
 
 <template>
@@ -80,15 +249,152 @@ const member_osu_ids = new Set([
 			{{ t('intro_3') }}
 		</n-card>
 
-		<n-divider>成员列表</n-divider>
+		<div class="my-10">
+			<n-scrollbar x-scrollable>
+				<n-alert type="success" class="w-fit mx-auto">
+					<template #header>
+						<n-text type="success">{{ t('team_current_can_join') }}</n-text>
+					</template>
 
-		<n-flex justify="center" align="center" size="small">
-			<template v-for="id in member_osu_ids">
-				<n-button class="w-[32%]" text tag="a" :href="(`https://osu.ppy.sh/users/${id}`)">
-					<n-image preview-disabled :img-props="{ class: 'w-full' }" :src="(`https://osekai.net/profiles/img/banner.svg?id=${id}`)"/>
-				</n-button>
-			</template>
-		</n-flex>
+					<n-text>{{ t('join_method') }}</n-text>
+
+					<br>
+					<n-text>{{ t('join_dc_left') }}&nbsp;</n-text>
+
+					<n-button type="primary" text tag="a" href="https://osu.ppy.sh/users/6336721">
+						{{ t('team_leader') }}
+					</n-button>
+
+					<n-text>&nbsp;{{ t('join_dc_right') }}</n-text>
+
+					<br>
+					<n-text>{{ t('join_qq_left') }}&nbsp;</n-text>
+
+					<n-button type="primary" text tag="a" href="https://osu.ppy.sh/users/6336721">
+						{{ t('team_leader') }}
+					</n-button>
+
+					<n-text>&nbsp;{{ t('join_qq_right') }}</n-text>
+
+					<br><br>
+
+					<n-text>{{ t('join_notice') }}</n-text>
+
+					<br>
+					<n-text>{{ t('join_notice_1_left') }}</n-text>
+
+					<n-popover>
+						<template #trigger>
+							<n-text class="cursor-pointer" type="info">{{ t('join_notice_1_left_tips') }}</n-text>
+						</template>
+
+						<n-text>此有前科之鉴。使用人类设定说明你的交际圈和我们并不在一块，即使不一定是这样，但为了避免令我们不快的情况产生，社团将直接隔断此现象产生。</n-text>
+					</n-popover>
+
+					<br>
+					<n-text>{{ t('join_notice_1_right') }}</n-text>
+
+					<n-popover>
+						<template #trigger>
+							<n-text class="cursor-pointer" type="info">{{ t('join_notice_1_right_tips') }}</n-text>
+						</template>
+
+						<n-text>由唯兽主义出品的《</n-text>
+						<n-button type="primary" text tag="a" href="https://www.bilibili.com/video/BV1Vt4y1278d">
+							如何绘制一个兽设???
+						</n-button>
+						<n-text>》，至少你能对构思方法有个大致的了解。</n-text>
+					</n-popover>
+
+					<br>
+					<n-text>{{ t('join_notice_2') }}</n-text>
+					<br>
+					<n-text>{{ t('join_notice_3') }}</n-text>
+					<br>
+					<n-text>{{ t('join_notice_4') }}</n-text>
+				</n-alert>
+			</n-scrollbar>
+		</div>
+
+		<n-divider>{{ t('member_list') }}</n-divider>
+
+		<n-card size="small">
+			<n-flex vertical>
+				<template v-for="(data, mode) in members">
+					<div class="text-center">
+						<n-h2 class="!my-5">{{ mode }}</n-h2>
+					</div>
+
+					<n-flex justify="center" align="center" size="small">
+						<template v-for="member in data">
+							<n-button class="w-full sm:w-[32%]" text tag="a" :href="(`https://osu.ppy.sh/users/${member.osu_id}`)">
+								<n-image preview-disabled :img-props="{ class: 'w-full' }" :src="(`https://osu-sig.vercel.app/card?user=${member.osu_id}&mode=${member.mode}&animation=true&w=1375&h=800`)"/>
+							</n-button>
+						</template>
+					</n-flex>
+				</template>
+			</n-flex>
+		</n-card>
+
+		<n-divider>{{ t('collab_before') }}</n-divider>
+
+		<n-card size="small">
+			<n-flex vertical>
+				<div class="text-center">
+					<n-h2 class="!my-5">{{ t('collab_eevee_2') }}</n-h2>
+				</div>
+
+				<n-scrollbar x-scrollable>
+					<n-flex vertical align="center" :size="0">
+						<n-flex :size="0" :wrap="false">
+							<n-button text tag="a" href="https://osu.ppy.sh/users/13478805">
+								<n-image preview-disabled :src="collab_eevee_2_1"/>
+							</n-button>
+
+							<n-button text tag="a" href="https://osu.ppy.sh/users/6336721">
+								<n-image preview-disabled :src="collab_eevee_2_2"/>
+							</n-button>
+
+							<n-button text tag="a" href="https://osu.ppy.sh/users/13188822">
+								<n-image preview-disabled :src="collab_eevee_2_3"/>
+							</n-button>
+
+							<n-button text tag="a" href="https://osu.ppy.sh/users/8664325">
+								<n-image preview-disabled :src="collab_eevee_2_4"/>
+							</n-button>
+
+							<n-button text tag="a" href="https://osu.ppy.sh/users/16191222">
+								<n-image preview-disabled :src="collab_eevee_2_5"/>
+							</n-button>
+						</n-flex>
+
+						<n-flex :size="0" :wrap="false">
+							<n-button text tag="a" href="https://osu.ppy.sh/users/7143444">
+								<n-image preview-disabled :src="collab_eevee_2_6"/>
+							</n-button>
+
+							<n-button text tag="a" href="https://osu.ppy.sh/users/15096556">
+								<n-image preview-disabled :src="collab_eevee_2_7"/>
+							</n-button>
+
+							<n-button text tag="a" href="https://osu.ppy.sh/users/4850066">
+								<n-image preview-disabled :src="collab_eevee_2_8"/>
+							</n-button>
+
+							<n-button text tag="a" href="https://osu.ppy.sh/users/7936634">
+								<n-image preview-disabled :src="collab_eevee_2_9"/>
+							</n-button>
+						</n-flex>
+					</n-flex>
+				</n-scrollbar>
+
+				<div class="text-center">
+					<n-h2 class="!my-5">{{ t('collab_eevee_3') }}</n-h2>
+				</div>
+
+				<n-image :img-props="{ class: 'w-full' }" preview-disabled :src="collab_eevee_3"/>
+			</n-flex>
+		</n-card>
 	</n-flex>
 </template>
 
@@ -99,7 +405,26 @@ const member_osu_ids = new Set([
 		"intro": "介绍",
 		"intro_1": "Paw 是一个小动物音游社团，意在聚集玩 osu 的小动物，让大家能够一起交流。",
 		"intro_2": "社团中每个小动物都有自己的特色，大家都有各自擅长的领域，都是独一无二的存在。",
-		"intro_3": "希望这个社团能成为大家愿意时常来光顾的地方。"
+		"intro_3": "希望这个社团能成为大家愿意时常来光顾的地方。",
+		"team_current_can_join": "战队目前开放加入。",
+		"join_method": "加入方式",
+		"team_leader": "队长",
+		"join_dc_left": "1.DC 群: 在 osu 联系",
+		"join_dc_right": "，直到通过审核后会邀请进入 DC 群。",
+		"join_qq_left": "2.QQ 群: 在 osu 联系",
+		"join_qq_right": "，直到通过审核后会邀请进入 Q 群。",
+		"join_notice": "注意要点",
+		"join_notice_1_left": "1.本社团只接受福瑞，如果你只是知道福瑞或喜欢福瑞的人，是不被社团接受的。你可以有很多个崽或设定，这是你的自由，",
+		"join_notice_1_left_tips": "但在社团里不允许使用人类设定来进行交流。",
+		"join_notice_1_right": "总而言之，就是你必须得有一个兽设。如果你觉得想设定是个很难的事情，或者你不知道如何着想，",
+		"join_notice_1_right_tips": "《如何构思一个兽设？》。",
+		"join_notice_2": "2.社团只接受 osu!taiko, osu!catch 和 osu!mania 三个模式的玩家，专修其他音游和玩法的玩家是不被社团接受的。",
+		"join_notice_3": "3.本社团虽然喜爱福瑞，但并不是什么混福瑞圈子的团体，希望到来的小动物能够注意一下交流时的言辞。",
+		"join_notice_4": "4.交流时，了解并注意不要触及一些人的底线。回忆是永久存在的。",
+		"member_list": "成员列表",
+		"collab_before": "合作往事",
+		"collab_eevee_2": "第二次伊布 collab",
+		"collab_eevee_3": "第三次伊布 collab"
 	}
 }
 </i18n>
