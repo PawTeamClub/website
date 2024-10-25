@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { darkTheme, dateZhCN, lightTheme, useOsTheme, zhCN } from 'naive-ui'
 import avatar from 'assets/avatar.webp'
+import { darkTheme, dateZhCN, lightTheme, useOsTheme, zhCN } from 'naive-ui'
 
 const osTheme = useOsTheme()
 const theme = computed(() => {
@@ -36,7 +36,7 @@ useHead({
 							<n-notification-provider>
 								<n-layout :native-scrollbar="false" position="absolute">
 									<n-layout-content class="container mx-auto">
-										<NuxtPage class="<sm:(px-2) py-10 mb-26"/>
+										<NuxtPage class="px-2 py-10 mb-5"/>
 									</n-layout-content>
 
 									<n-layout-footer class="p-2" position="absolute">
