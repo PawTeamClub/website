@@ -46,6 +46,10 @@ const members = pipe(
 			osu_id: 10233705,
 			mode: 'std'
 		},
+		{
+			osu_id: 23294788,
+			mode: 'std'
+		},
 
 		{
 			osu_id: 4850066,
@@ -65,6 +69,10 @@ const members = pipe(
 		},
 		{
 			osu_id: 10233705,
+			mode: 'taiko'
+		},
+		{
+			osu_id: 14748844,
 			mode: 'taiko'
 		},
 
@@ -119,10 +127,6 @@ const members = pipe(
 		},
 		{
 			osu_id: 14906054,
-			mode: 'mania'
-		},
-		{
-			osu_id: 15096556,
 			mode: 'mania'
 		},
 		{
@@ -194,10 +198,6 @@ const members = pipe(
 			mode: 'mania'
 		},
 		{
-			osu_id: 23294788,
-			mode: 'mania'
-		},
-		{
 			osu_id: 15141441,
 			mode: 'mania'
 		},
@@ -217,9 +217,16 @@ const members = pipe(
 			osu_id: 15807315,
 			mode: 'mania'
 		},
-
 		{
-			osu_id: 16303789,
+			osu_id: 14391949,
+			mode: 'mania'
+		},
+		{
+			osu_id: 15270411,
+			mode: 'mania'
+		},
+		{
+			osu_id: 5010694,
 			mode: 'mania'
 		},
 		{
@@ -227,7 +234,7 @@ const members = pipe(
 			mode: 'mania'
 		},
 		{
-			osu_id: 20846896,
+			osu_id: 16303789,
 			mode: 'mania'
 		},
 		{
@@ -235,14 +242,17 @@ const members = pipe(
 			mode: 'mania'
 		},
 		{
-			osu_id: 3595196,
+			osu_id: 20846896,
 			mode: 'mania'
 		},
 		{
-			osu_id: 5010694,
+			osu_id: 3595196,
 			mode: 'mania'
 		}
-	],
+	] satisfies {
+		readonly osu_id: number
+		readonly mode: 'std' | 'taiko' | 'catch' | 'mania'
+	}[],
 	groupBy(
 		prop('mode')
 	)
