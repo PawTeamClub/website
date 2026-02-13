@@ -20,35 +20,35 @@ const members = pipe(
 	[
 		{
 			osu_id: 6786079,
-			mode: 'std'
+			mode: 'osu'
 		},
 		{
 			osu_id: 1759858,
-			mode: 'std'
+			mode: 'osu'
 		},
 		{
 			osu_id: 4850066,
-			mode: 'std'
+			mode: 'osu'
 		},
 		{
 			osu_id: 4313716,
-			mode: 'std'
+			mode: 'osu'
 		},
 		{
 			osu_id: 16191222,
-			mode: 'std'
+			mode: 'osu'
 		},
 		{
 			osu_id: 8693179,
-			mode: 'std'
+			mode: 'osu'
 		},
 		{
 			osu_id: 10233705,
-			mode: 'std'
+			mode: 'osu'
 		},
 		{
 			osu_id: 23294788,
-			mode: 'std'
+			mode: 'osu'
 		},
 
 		{
@@ -251,7 +251,7 @@ const members = pipe(
 		}
 	] satisfies {
 		readonly osu_id: number
-		readonly mode: 'std' | 'taiko' | 'catch' | 'mania'
+		readonly mode: 'osu' | 'taiko' | 'catch' | 'mania'
 	}[],
 	groupBy(
 		prop('mode')
@@ -354,7 +354,7 @@ const members = pipe(
 					<n-flex justify="center" align="center" size="small">
 						<template v-for="member in data">
 							<n-button class="w-full sm:w-[32%]" text tag="a" :href="(`https://osu.ppy.sh/users/${member.osu_id}`)">
-								<n-image preview-disabled :img-props="{ class: 'w-full' }" :src="(`https://osekai.net/profiles/img/banner.svg?id=${member.osu_id}`)"/>
+								<n-image preview-disabled :img-props="{ class: 'w-full' }" :src="(`https://osu-profile-stats.vercel.app/api/profile-stats/${member.osu_id}?playmode=${member.mode}&version=full`)"/>
 							</n-button>
 						</template>
 					</n-flex>
