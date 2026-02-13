@@ -354,7 +354,7 @@ const members = pipe(
 					<n-flex justify="center" align="center" size="small">
 						<template v-for="member in data">
 							<n-button class="w-full sm:w-[32%]" text tag="a" :href="(`https://osu.ppy.sh/users/${member.osu_id}`)">
-								<n-image preview-disabled :img-props="{ class: 'w-full' }" :src="(`https://osu-profile-stats.vercel.app/api/profile-stats/${member.osu_id}?playmode=${member.mode}&version=full`)"/>
+								<n-image preview-disabled :img-props="{ class: 'w-full' }" :src="(`https://osu-profile-stats.vercel.app/api/profile-stats/${member.osu_id}?playmode=${member.mode === 'catch' ? 'fruits' : member.mode}&version=full`)"/>
 							</n-button>
 						</template>
 					</n-flex>
