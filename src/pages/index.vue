@@ -354,7 +354,7 @@ const members = pipe(
 					<n-flex justify="center" align="center" size="small">
 						<template v-for="member in data">
 							<n-button class="w-full sm:w-[32%]" text tag="a" :href="(`https://osu.ppy.sh/users/${member.osu_id}`)">
-								<n-image preview-disabled :img-props="{ class: 'w-full' }" :src="(`https://osu-sig.vercel.app/card?user=${member.osu_id}&mode=${member.mode}&animation=true&w=1375&h=800`)"/>
+								<n-image preview-disabled :img-props="{ class: 'w-full' }" :src="(`https://osekai.net/profiles/img/banner.svg?id=${member.osu_id}`)"/>
 							</n-button>
 						</template>
 					</n-flex>
